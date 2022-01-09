@@ -64,3 +64,18 @@ def twoSum(nums, target):
 result=twoSum([2, 11, 7, 15], 9)
 print(result) # show [0, 2] because nums[0]+nums[2] is 9
 
+#題目五
+def maxZeros(nums):
+    maxcount=0
+    count=0
+    for i in range(len(nums)):
+        if nums[i]==0:
+            count+=1
+            maxcount=max(count,maxcount)
+        else:
+            count=0 
+    print(maxcount)
+maxZeros([0, 1, 0, 0]) # 得到 2
+maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0]) # 得到 4
+maxZeros([1, 1, 1, 1, 1]) # 得到 0
+maxZeros([0, 0, 0, 1, 1]) # 得到 3
