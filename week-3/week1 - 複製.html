@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <title>My Website</title>
+        <link href="week1 - 複製.css" rel="stylesheet"/>
+        <script>
+            function getData(){
+                let req=new XMLHttpRequest();
+                req.open("get","https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json")
+                req.onload=function(){
+                    let data=JSON.parse(req.responseText)
+                    let fragment=document.createDocumentFragment();
+                    for(let i=0;i<8;i++){
+                    	let j=data.result.results[i].file.split("https://")[1];
+                        let k="http://"+j;
+                        let bigdiv=document.createElement("div");
+                        let img=document.createElement("img");
+                        img.src=k;
+                        fragment.appendChild(bigdiv);
+                        bigdiv.setAttribute("class","picture2");
+                        bigdiv.appendChild(img);
+                        let y=data.result.results[i].stitle;
+                        let title=document.createElement("div");
+                        let textnode=document.createTextNode(y)
+                        title.appendChild(textnode);
+                        title.setAttribute("class","content");
+                        bigdiv.appendChild(title);
+                        }
+                    let pic=document.getElementById("pc");
+                    pc.appendChild(fragment);
+                }
+                req.send()
+            }
+        </script>
+    </head>
+    <body onload="getData()">
+        <nav>
+            <div class="title">My Website</div>
+            <div class="blank"></div>
+            <div class="noshow"><img src="menu_icon.png"></div>
+            <div class="item">項目一</div>
+            <div class="item">項目二</div>
+            <div class="item">項目三</div>
+            <div class="item">項目四</div>
+        </nav>
+        <div class="welcome">Welcome to MyHome</div>
+        <div class="picture" id="pc">
+        </div>
+    </body>
+</html>
