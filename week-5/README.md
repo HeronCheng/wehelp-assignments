@@ -11,7 +11,9 @@
 * 使用 SELECT 指令取得欄位 username 是 test 的會員資料。  
 * 使用 SELECT 指令取得 member 資料表中第 2 ~ 4 共三筆資料，並按照 time 欄位，由近到遠排序。( 並非編號 2、3、4 的資料，而是排序後的第 2 ~ 4 筆資料 )  
 ![要求3-5](/week-5/要求3-5.PNG)  
-使用 SELECT 指令取得欄位 username 是 test、且欄位 password 也是 test 的資料。  
+* 使用 SELECT 指令取得欄位 username 是 test、且欄位 password 也是 test 的資料。 
+![要求3-6](/week-5/要求3-6.PNG)  
+* 使用 UPDATE 指令更新欄位 username 是 test 的會員資料，將資料中的 name 欄位改成 test2。
 ## 要求四
 
 
