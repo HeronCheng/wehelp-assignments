@@ -8,8 +8,7 @@
 ![要求3-3](/week-5/要求3-3.PNG)  
 * 使用 SELECT 指令取得 member 資料表中第 2 ~ 4 共三筆資料，並按照 time 欄位，由近到遠排序。( 並非編號 2、3、4 的資料，而是排序後的第 2 ~ 4 筆資料 )  
 ![要求3-4](/week-5/要求3-4.PNG)  
-* 使用 SELECT 指令取得欄位 username 是 test 的會員資料。  
-* 使用 SELECT 指令取得 member 資料表中第 2 ~ 4 共三筆資料，並按照 time 欄位，由近到遠排序。( 並非編號 2、3、4 的資料，而是排序後的第 2 ~ 4 筆資料 )  
+* 使用 SELECT 指令取得欄位 username 是 test 的會員資料。    
 ![要求3-5](/week-5/要求3-5.PNG)  
 * 使用 SELECT 指令取得欄位 username 是 test、且欄位 password 也是 test 的資料。 
 ![要求3-6](/week-5/要求3-6.PNG)  
