@@ -19,7 +19,8 @@
 * 取得 member 資料表中，總共有幾筆資料 ( 幾位會員 )。  
 ![要求4-1](/week-5/要求4-1.PNG)  
 * 取得 member 資料表中，所有會員 follower_count 欄位的總和。
-
+![要求4-2](/week-5/要求4-2.PNG)  
+* 取得 member 資料表中，所有會員 follower_count 欄位的平均數。
 ## 要求五
 
 
