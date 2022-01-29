@@ -13,9 +13,10 @@
 ![要求3-5](/week-5/要求3-5.PNG)  
 * 使用 SELECT 指令取得欄位 username 是 test、且欄位 password 也是 test 的資料。 
 ![要求3-6](/week-5/要求3-6.PNG)  
-* 使用 UPDATE 指令更新欄位 username 是 test 的會員資料，將資料中的 name 欄位改成 test2。
+* 使用 UPDATE 指令更新欄位 username 是 test 的會員資料，將資料中的 name 欄位改成 test2。  
+![要求3-7](/week-5/要求3-7.PNG)
 ## 要求四
-
+* 取得 member 資料表中，總共有幾筆資料 ( 幾位會員 )。
 
 
 ## 要求五
