@@ -23,6 +23,10 @@
 * 取得 member 資料表中，所有會員 follower_count 欄位的平均數。  
 ![要求4-3](/week-5/要求4-3.PNG)
 ## 要求五
-
+* 使用 SELECT 搭配 JOIN 語法，取得所有留言，結果須包含留言者會員的姓名。  
+![要求5-1](/week-5/要求5-1.PNG)  
+![要求5-2](/week-5/要求5-2.PNG)  
+* 使用 SELECT 搭配 JOIN 語法，取得 member 資料表中欄位 username 是 test 的所有留言，資料中須包含留言者會員的姓名。  
+![要求5-3](/week-5/要求5-3.PNG)
 
 
