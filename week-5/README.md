@@ -16,8 +16,9 @@
 * 使用 UPDATE 指令更新欄位 username 是 test 的會員資料，將資料中的 name 欄位改成 test2。  
 ![要求3-7](/week-5/要求3-7.PNG)
 ## 要求四
-* 取得 member 資料表中，總共有幾筆資料 ( 幾位會員 )。
-
+* 取得 member 資料表中，總共有幾筆資料 ( 幾位會員 )。  
+![要求4-1](/week-5/要求4-1.PNG)  
+* 取得 member 資料表中，所有會員 follower_count 欄位的總和。
 
 ## 要求五
 
