@@ -15,6 +15,8 @@ def signin():
     password=request.form.get("password2")
     cursor.execute("SELECT `username`,`password` from `member` WHERE `username`='"+account+"' and `password`='"+password+"';")
     checkData=cursor.fetchall()
+    cursor.execute("SELECT `name` FROM `member` WHERE `username`='"+account+"';")
+    name=cursor.fetchone()[0]
     cursor.close()
     connection.close()     
     if account=="" or password=="":
@@ -24,4 +26,5 @@ def signin():
     else:
         user=account
         session["user"]=user
+        session["name"]=name
         return redirect(url_for("Member.member"))
