@@ -1,0 +1,40 @@
+body{
+    margin: 0px;
+}
+.welcome{
+    font-size:40px;
+    font-weight: bold;
+    color: white;
+    font-family: "微軟正黑體";
+    text-align: center;
+    height: 150px;
+    background-color:#003060;
+    line-height: 150px;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.text{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+a{
+    display: flex;
+    justify-content: center;
+}
+.input{
+    text-align: center;
+}
+input{
+    padding: 5px;
+}
+.smalltitle{
+    text-align: center;
+}
