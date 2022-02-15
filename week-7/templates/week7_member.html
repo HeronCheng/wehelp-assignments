@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week7</title>
+    <link href="{{url_for('static',filename='member.css')}}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="welcome">歡迎光臨，這是會員頁</div>
+    <div class="title">{{memberName}}，歡迎登入系統</div>   
+    <a href="http://127.0.0.1:3000/signout">登出系統</a>
+    <br/><div class="text">查詢會員姓名</div> 
+    <div class="input">
+        <input type="text" value="" id="query">
+        <input type="button" value="查詢" onclick="getValue()">
+    </div>
+    <div id="nameQuery" class="smalltitle"></div>
+    <br/><div class="text">更新我的姓名</div> 
+    <div class="input">
+        <input type="text" value="" id="modify">
+        <input type="button" value="更新" onclick="modify()">
+    </div>
+    <div id="nameModify" class="smalltitle"></div>
+    <script>
+        function getValue(){
+            let data=document.getElementById("query").value;
+            fetch("http://127.0.0.1:3000/api/members?username="+data)
+            .then(function (response){
+                return response.json();
+            }).then(function(result){
+                if(result.data==null){
+                    console.log(result)
+                    document.getElementById("nameQuery").innerHTML="查無資料";
+                }else{
+                    console.log(result)
+                    let nameQuery2=result.data.name;
+                    document.getElementById("nameQuery").innerHTML=nameQuery2+"("+data+")";
+                }
+            })
+            }
+        function modify(){
+            let data=document.getElementById("modify").value;
+            let url="http://127.0.0.1:3000/api/member"
+            let bodyData={"name":data}
+            fetch(url,{
+                method:'POST',
+                body: JSON.stringify(bodyData),
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                  })
+            }).then(function (response){
+                return response.json();
+            }).then(function(result){
+                if("ok" in result){
+                    document.getElementById("nameModify").innerHTML="更新成功";
+                }
+        })
+        }     
+    </script>    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week7</title>
+    <style type="text/css">
+        body{margin: 0px;}
+        .welcome{
+            font-size:40px;
+            font-weight: bold;
+            color: white;
+            font-family: "微軟正黑體";
+            text-align: center;
+            height: 150px;
+            background-color:#003060;
+            line-height: 150px;
+        }
+        .title{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        form{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">歡迎光臨，請註冊登入系統</div>
+    <div class="title">註冊帳號</div>    
+    <form action="/signup" method="POST">
+        姓名  <input type="text" name="membername" value=""><br/><br/>
+        帳號  <input type="text" name="account1" value=""><br/><br/>
+        密碼  <input type="password" name="password1" value=""><br/><br/>
+        <input type="submit" name="" value="註冊">
+    </form>
+    <br/><br/><hr/>
+    <div class="title">登入系統</div>    
+    <form action="/signin" method="POST" id="form">
+        帳號  <input type="text" name="account2" value=""><br/><br/>
+        密碼  <input type="password" name="password2" value=""><br/><br/>
+        <input type="submit" name="" value="登入">
+    </form>
+</body>
+</html>
