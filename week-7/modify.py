@@ -12,9 +12,9 @@ def modify():
                                        database='website',
                                        buffered=True,)
     cursor=connection.cursor()
-    originName=session.get("name")
+    originName=session.get("user")
     newName=request.get_json()["name"]
-    cursor.execute("UPDATE `member` SET `name`='"+newName+"' WHERE `name`='"+originName+"';")
+    cursor.execute("UPDATE `member` SET `name`='"+newName+"' WHERE `username`='"+originName+"';")
     cursor.close()
     connection.commit()
     connection.close()
