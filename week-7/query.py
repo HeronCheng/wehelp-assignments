@@ -1,4 +1,4 @@
-import mysql.connector
+from cnxpool import cnxpool
 from flask import request,jsonify,Blueprint
 
 Query=Blueprint("Query",__name__)
@@ -6,17 +6,12 @@ Query=Blueprint("Query",__name__)
 @Query.route("/api/members",methods=["GET"])
 def query():
     data=request.args.get("username",None)
-    connection=mysql.connector.connect(host='localhost',
-                                       port='3306',
-                                       user='root',
-                                       password='123456',
-                                       database='website',
-                                       buffered=True,)
-    cursor=connection.cursor()
+    cnx=cnxpool.get_connection()
+    cursor=cnx.cursor()
     cursor.execute("SELECT `id`,`name`,`username` FROM `member` WHERE `username`='"+data+"';")
     result=cursor.fetchall()
     cursor.close()
-    connection.close()
+    cnx.close()
     if result == []:
         return jsonify({"data":None})
     else:

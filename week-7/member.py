@@ -1,6 +1,4 @@
-from winreg import HKEY_LOCAL_MACHINE
-from flask import Blueprint, session, redirect, render_template,request
-import mysql.connector
+from flask import Blueprint, session, redirect, render_template
 
 
 Member=Blueprint('Member',__name__)

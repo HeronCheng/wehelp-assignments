@@ -21,4 +21,6 @@ app.register_blueprint(Signup)
 app.register_blueprint(Query)
 app.register_blueprint(Modify)
 
+
+
 app.run(port=3000)
